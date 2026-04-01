@@ -1,30 +1,29 @@
 # Desert Wildfires Posting
-Desert Wildfires Posting Website
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Desert Wildfires Social</title>
     <style>
         :root{
-            --bg:#2e2e2e; --card:#c4c4c4; --accent:#ff4d4d; --muted:#8f5050; --glass: rgb(255, 255, 255);
+            --bg:#0b0b0b; --card:#111; --accent:#ff4d4d; --muted:#999; --glass: rgba(255,255,255,0.03);
             --radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
         }
-        html,body{height:100%; margin:0; background:linear-gradient(180deg,#ffffff 0%, #ff4d00 100%); color:#000000}
+        html,body{height:100%; margin:0; background:linear-gradient(180deg,#0f0f0f 0%, #070707 100%); color:#fff}
         .app{max-width:900px;margin:32px auto;padding:24px;border-radius:16px;background:linear-gradient(180deg,rgba(255,77,77,0.04),transparent); box-shadow:0 6px 30px rgba(0,0,0,0.6)}
         header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
         .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#ff7a00,#ff0044);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(255,64,64,0.12)}
         h1{font-size:20px;margin:0}
         p.lead{margin:0;color:var(--muted); font-size:13px}
         .composer{display:grid;grid-template-columns:1fr 140px;gap:12px;margin-top:16px}
-        .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 4px 18px rgb(0,0,0,0)}
+        .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 4px 18px rgba(0,0,0,0.6)}
         label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
         input[type="text"], textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;resize:vertical}
         textarea{min-height:92px}
         .controls{display:flex;flex-direction:column;height:100%;gap:8px;justify-content:space-between}
         .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#ff7a7a);color:#fff;font-weight:600;cursor:pointer}
-        .btn.secondary{background:transparent;border:1px solid rgb(255,255,255);color:var(--muted)}
+        .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
         .preview{margin-top:8px;border-radius:10px;overflow:hidden;background:var(--glass);padding:8px}
         .posts{margin-top:18px;display:flex;flex-direction:column;gap:12px}
         .post{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:linear-gradient(180deg,#111,#0e0e0e);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
@@ -36,7 +35,7 @@ Desert Wildfires Posting Website
         .post-actions{display:flex;gap:8px;margin-top:8px}
         .small{font-size:13px;padding:6px 8px;border-radius:8px}
         .like{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);cursor:pointer}
-        .delete{background:rgba(255,20,20,0.12);border:1px solid rgb(255, 255, 255);color:#ffbdbd}
+        .delete{background:rgba(255,20,20,0.12);border:1px solid rgba(255,20,20,0.18);color:#ffbdbd}
         .empty{color:var(--muted);text-align:center;padding:20px}
         footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
         @media(max-width:720px){.composer{grid-template-columns:1fr;}.logo{width:48px;height:48px}}
@@ -48,14 +47,14 @@ Desert Wildfires Posting Website
             <div class="logo">DW Social</div>
             <div>
                 <h1>Desert Wildfires Social</h1>
-                <p class="lead">Post text and optionally an image URL.</p>
+                <p class="lead">Post text and an image URL.</p>
             </div>
         </header>
 
         <section class="composer card" aria-labelledby="composer-title">
             <div>
-                <label for="author">Name</label>
-                <input id="author" type="text" placeholder="Your name (optional)" maxlength="40">
+                <label for="author">Name (optional)</label>
+                <input id="author" type="text" placeholder="Your name" maxlength="40">
 
                 <label for="text" style="margin-top:10px">What's on fire?</label>
                 <textarea id="text" placeholder="Write something..." maxlength="1000"></textarea>
@@ -83,7 +82,7 @@ Desert Wildfires Posting Website
             <!-- posts injected here -->
         </section>
 
-        <footer>This is Desert Wildfires Social</footer>
+        <footer>Desert Wildfires Social</footer>
     </main>
 
     <script>
@@ -110,17 +109,17 @@ Desert Wildfires Posting Website
                 const el = document.createElement('article');
                 el.className = 'post card';
                 el.innerHTML = `
-                    <div class="avatar" title="${escapeHtml(p.author||'Desert Wildfires')}">${escapeInitials(p.author)}</div>
+                    <div class="avatar" title="${escapeHtml(p.author||'Fire Kid')}">${escapeInitials(p.author)}</div>
                     <div class="content">
                         <div class="meta">
-                            <strong>${escapeHtml(p.author || 'Desert Wildfires')}</strong>
+                            <strong>${escapeHtml(p.author || 'Fire Kid')}</strong>
                             <span>•</span>
                             <span>${timeAgo(p.createdAt)}</span>
                         </div>
                         <div class="text">${escapeHtml(p.text)}</div>
                         ${p.image ? `<img src="${escapeAttr(p.image)}" alt="post image" onerror="this.style.display='none'">` : ''}
                         <div class="post-actions">
-                            <button class="small like" data-id="${p.id}">👍 ${p.likes || 0}</button>
+                            <button class="small like" data-id="${p.id}">🔥 ${p.likes || 0}</button>
                             <button class="small delete" data-id="${p.id}">Delete</button>
                         </div>
                     </div>
@@ -165,7 +164,7 @@ Desert Wildfires Posting Website
         });
 
         clearBtn.addEventListener('click', ()=>{
-            if(!confirm('Clear composer fields?')) return;
+            if(!confirm('Clear text field?')) return;
             authorEl.value = '';
             textEl.value = '';
             imgEl.value = '';
@@ -192,21 +191,9 @@ Desert Wildfires Posting Website
         // Delegated actions: like & delete
         postsList.addEventListener('click', (e)=>{
             const likeBtn = e.target.closest('.like');
-            const loveBtn = e.target.closest('.love');
-            const fireBtn = e.target.closest('.fire');
             const delBtn = e.target.closest('.delete');
             if(likeBtn){
                 const id = likeBtn.dataset.id;
-                const posts = readPosts();
-                const p = posts.find(x=>x.id===id);
-                if(p){ p.likes = (p.likes||0) + 1; writePosts(posts); renderPosts(); }
-            } else if(loveBtn){
-                const id = loveBtn.dataset.id;
-                const posts = readPosts();
-                const p = posts.find(x=>x.id===id);
-                if(p){ p.likes = (p.likes||0) + 1; writePosts(posts); renderPosts(); }
-            } else if(fireBtn){
-                const id = fireBtn.dataset.id;
                 const posts = readPosts();
                 const p = posts.find(x=>x.id===id);
                 if(p){ p.likes = (p.likes||0) + 1; writePosts(posts); renderPosts(); }
