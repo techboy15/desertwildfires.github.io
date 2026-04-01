@@ -18,13 +18,13 @@ Desert Wildfires Posting Website
         h1{font-size:20px;margin:0}
         p.lead{margin:0;color:var(--muted); font-size:13px}
         .composer{display:grid;grid-template-columns:1fr 140px;gap:12px;margin-top:16px}
-        .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 4px 18px rgba(0,0,0,0.6)}
+        .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 4px 18px rgb(0,0,0,0)}
         label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
         input[type="text"], textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;resize:vertical}
         textarea{min-height:92px}
         .controls{display:flex;flex-direction:column;height:100%;gap:8px;justify-content:space-between}
         .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#ff7a7a);color:#fff;font-weight:600;cursor:pointer}
-        .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+        .btn.secondary{background:transparent;border:1px solid rgb(255,255,255);color:var(--muted)}
         .preview{margin-top:8px;border-radius:10px;overflow:hidden;background:var(--glass);padding:8px}
         .posts{margin-top:18px;display:flex;flex-direction:column;gap:12px}
         .post{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:linear-gradient(180deg,#111,#0e0e0e);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
