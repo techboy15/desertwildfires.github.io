@@ -1,4 +1,5 @@
 # Desert Wildfires Posting
+
 <!doctype html>
 <html lang="en">
 <head>
