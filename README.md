@@ -8,7 +8,7 @@ Desert Wildfires Posting Website
     <title>Desert Wildfires Social</title>
     <style>
         :root{
-            --bg:#2e2e2e; --card:#c4c4c4; --accent:#ff4d4d; --muted:#8f5050; --glass: rgba(255, 255, 255, 0.03);
+            --bg:#2e2e2e; --card:#c4c4c4; --accent:#ff4d4d; --muted:#8f5050; --glass: rgb(255, 255, 255);
             --radius:12px; font-family: Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
         }
         html,body{height:100%; margin:0; background:linear-gradient(180deg,#ffffff 0%, #ff4d00 100%); color:#000000}
