@@ -36,7 +36,7 @@ Desert Wildfires Posting Website
         .post-actions{display:flex;gap:8px;margin-top:8px}
         .small{font-size:13px;padding:6px 8px;border-radius:8px}
         .like{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);cursor:pointer}
-        .delete{background:rgba(255,20,20,0.12);border:1px solid rgba(255,20,20,0.18);color:#ffbdbd}
+        .delete{background:rgba(255,20,20,0.12);border:1px solid rgb(255, 255, 255);color:#ffbdbd}
         .empty{color:var(--muted);text-align:center;padding:20px}
         footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
         @media(max-width:720px){.composer{grid-template-columns:1fr;}.logo{width:48px;height:48px}}
